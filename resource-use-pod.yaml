@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: resouces-pod
+  labels: 
+    app: resouceuse
+spec:
+  containers:
+  - name: con1
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "225m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
